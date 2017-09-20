@@ -14,12 +14,12 @@ namespace StudentRegistration
 		{
 			
 
-		}
+	}
 
 		protected void Button2_Click(object sender, EventArgs e)
 		{
 			Random r = new Random();
-			int rInt = r.Next(0, 100);
+			int rInt = r.Next(10, 99);
 			addStudent.Add(new Student() { StudentID = rInt, FirstName = TextBox1.Text, LastName = TextBox2.Text, EmailID = TextBox4.Text, Dob = TextBox7.Text, Phone = TextBox3.Text, Password = TextBox5.Text, ConfirmPassword = TextBox6.Text });
 			Session.Add("First", addStudent[0].FirstName);
 			Session.Add("Id", addStudent[0].StudentID);

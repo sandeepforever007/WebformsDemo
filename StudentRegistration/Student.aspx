@@ -38,15 +38,15 @@
 			<br />
 			<br />
 			<asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label>
-			<asp:TextBox ID="TextBox5" Style='margin-left: 100px' runat="server"></asp:TextBox>
+			<asp:TextBox ID="TextBox5" TextMode="Password" Style='margin-left: 100px' runat="server"></asp:TextBox>
 			<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="TextBox5" ErrorMessage="*"></asp:RequiredFieldValidator>
-			<asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="TextBox5" ControlToValidate="TextBox6" ErrorMessage="Password doesnt match"></asp:CompareValidator>
 			<asp:RegularExpressionValidator ID="RegularExpressionValidator4" ValidationExpression="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,12}$" runat="server" ControlToValidate="TextBox5" ErrorMessage="Password should contain one upper, one lower, one digit lenght 8-12"></asp:RegularExpressionValidator>
 			<br />
 			<br />
 			<asp:Label ID="lblConfirmPassword" runat="server" Text="Confirm Password"></asp:Label>
-			<asp:TextBox ID="TextBox6" Style='margin-left: 47px' ToolTip="Enter Password" runat="server"></asp:TextBox>
+			<asp:TextBox ID="TextBox6" TextMode="Password" Style='margin-left: 47px' ToolTip="Enter Password" runat="server"></asp:TextBox>
 			<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="TextBox6" ErrorMessage="*"></asp:RequiredFieldValidator>
+			<asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="TextBox5" ControlToValidate="TextBox6" ErrorMessage="Password doesnt match"></asp:CompareValidator>
 			<br />
 			<br />
 			<asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Submit" />

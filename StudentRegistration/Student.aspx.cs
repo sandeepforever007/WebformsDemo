@@ -9,29 +9,39 @@ namespace StudentRegistration
 {
 	public partial class Student : System.Web.UI.Page
 	{
-		List<Student> addStudent = new List<Student>();
+		
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			
 
-	}
+
+		}
 
 		protected void Button2_Click(object sender, EventArgs e)
 		{
-			Random r = new Random();
-			int rInt = r.Next(10, 99);
-			addStudent.Add(new Student() { StudentID = rInt, FirstName = TextBox1.Text, LastName = TextBox2.Text, EmailID = TextBox4.Text, Dob = TextBox7.Text, Phone = TextBox3.Text, Password = TextBox5.Text, ConfirmPassword = TextBox6.Text });
-			Session.Add("First", addStudent[0].FirstName);
-			Session.Add("Id", addStudent[0].StudentID);
-			Session.Add("LastName", addStudent[0].LastName);
-			Session.Add("Email", addStudent[0].EmailID);
-			Session.Add("DOB", addStudent[0].Dob);
-			Session.Add("Phone", addStudent[0].Phone);
-
-			Server.Transfer("studentdetail.aspx");
-			//GridView1.DataSource = addStudent;
-			//GridView1.DataBind();
+			List<Student> addStudent = new List<Student>();
+			Random random = new Random();
+			int rId = random.Next(10, 99);
+			addStudent.Add(new Student()
+			{
+				StudentID = rId,
+				FirstName = TextBox1.Text,
+				LastName = TextBox2.Text,
+				EmailID = TextBox4.Text,
+				Dob = TextBox7.Text,
+				Phone = TextBox3.Text,
+				Password = TextBox5.Text,
+				ConfirmPassword = TextBox6.Text,
+				Address1 = TextBox8.Text,
+				Address2 = TextBox10.Text,
+				City = TextBox11.Text,
+				State = TextBox12.Text,
+				Zip = Convert.ToInt32(TextBox9.Text)
+			});
+			Session["studentList"] = addStudent;
+			Server.Transfer("studentdetail.aspx");			
 		}
+
+
 	}
 
 	public partial class Student
@@ -44,5 +54,10 @@ namespace StudentRegistration
 		public string Phone { get; set; }
 		public string Password { get; set; }
 		public string ConfirmPassword { get; set; }
+		public string Address1 { get; set; }
+		public string Address2 { get; set; }
+		public string City { get; set; }
+		public string State { get; set; }
+		public int Zip { get; set; }
 	}
 }

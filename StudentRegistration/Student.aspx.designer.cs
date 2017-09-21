@@ -76,13 +76,13 @@ namespace StudentRegistration {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
-        /// lblEmailId control.
+        /// Label6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmailId;
+        protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
         /// TextBox4 control.
@@ -94,22 +94,22 @@ namespace StudentRegistration {
         protected global::System.Web.UI.WebControls.TextBox TextBox4;
         
         /// <summary>
-        /// RequiredFieldValidator3 control.
+        /// RequiredFieldValidator10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator10;
         
         /// <summary>
-        /// RegularExpressionValidator1 control.
+        /// RegularExpressionValidator6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator6;
         
         /// <summary>
         /// lblDob control.

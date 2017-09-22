@@ -46,9 +46,9 @@
 					<asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TextBox7" ValidationExpression="^(0?[1-9]|[12][0-9]|3[01])[\/](0?[1-9]|1[012])[\/]\d{4}$" ErrorMessage="Please enter DOB in mm//dd/yyyy"></asp:RegularExpressionValidator>
 				</td>
 			</tr>
-			</table>
-				<uc1:AddressUserControl runat="server" id="AddressUserControl" />
-			<table>
+		</table>
+		<uc1:AddressUserControl runat="server" ID="AddressUserControl" />
+		<table>
 			<tr>
 				<td style="width: 170px">
 					<asp:Label ID="lblPhone" runat="server" Text="Phone"></asp:Label>
